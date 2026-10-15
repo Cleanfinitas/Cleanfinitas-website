@@ -4,204 +4,668 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cleanfinitas offers professional residential and commercial cleaning services across Gauteng, North West, Mpumalanga and Limpopo.">
+  <meta name="theme-color" content="#087f72">
+  <meta name="description" content="Cleanfinitas provides professional residential and commercial cleaning services across Gauteng, North West, Mpumalanga and Limpopo. Request a quotation today.">
   <title>Cleanfinitas | Professional Cleaning Services</title>
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --teal: #087f72;
+      --teal-dark: #075b54;
+      --teal-light: #e8f6f2;
+      --ink: #183b3b;
+      --muted: #637575;
+      --white: #ffffff;
+      --border: #e1ece8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      color: #243447;
-      line-height: 1.6;
-      background: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.7;
     }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
     header {
-      background: #fff;
-      padding: 20px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      border-bottom: 1px solid #e8eeee;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--border);
     }
-    .logo { font-size: 27px; font-weight: bold; color: #087f72; }
-    nav a {
-      color: #243447;
-      text-decoration: none;
-      margin-left: 18px;
-      font-size: 14px;
-    }
-    .hero {
-      background: linear-gradient(120deg, #e8f7f3, #f4f8fb);
-      padding: 85px 7%;
+
+    .navbar {
+      min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-    .hero-text { flex: 1 1 300px; }
-    .eyebrow {
-      color: #087f72;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 13px;
-    }
-    h1 {
-      font-size: clamp(36px, 5vw, 58px);
-      line-height: 1.1;
-      margin: 15px 0 20px;
-      color: #173b43;
-    }
-    .hero p { max-width: 550px; font-size: 18px; color: #52646b; }
-    .button {
-      display: inline-block;
-      background: #087f72;
-      color: white;
-      padding: 14px 23px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 25px;
-    }
-    .hero-art {
-      flex: 1 1 280px;
-      min-height: 260px;
-      border-radius: 18px;
-      background: linear-gradient(145deg, #c8e9df, #e9f4ef);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 30px;
-      font-size: 100px;
-    }
-    section { padding: 65px 7%; }
-    .section-title { text-align: center; margin-bottom: 12px; font-size: 32px; color: #173b43; }
-    .section-intro { text-align: center; max-width: 650px; margin: 0 auto 35px; color: #667780; }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 20px;
     }
-    .service {
-      padding: 25px;
-      border: 1px solid #e4eeeb;
-      border-radius: 12px;
-      background: #fff;
+
+    .brand {
+      color: var(--teal);
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: -1px;
     }
-    .service .icon { font-size: 35px; }
-    .service h3 { margin: 12px 0 8px; color: #087f72; }
-    .service p { color: #667780; font-size: 15px; }
-    .about { background: #f4f8f7; text-align: center; }
-    .about p { max-width: 760px; margin: 15px auto; color: #52646b; }
-    .areas { background: #fff; text-align: center; }
-    .area-list { color: #087f72; font-weight: bold; margin-top: 15px; }
-    .contact { background: #173b43; color: white; text-align: center; }
-    .contact h2 { font-size: 32px; }
-    .contact p { margin-top: 12px; color: #e1eeeb; }
-    .contact .button { background: #25a875; }
-    footer { padding: 22px; text-align: center; background: #102d33; color: #dce8e5; font-size: 13px; }
-    @media (max-width: 600px) {
-      header { padding: 18px 5%; }
-      nav { width: 100%; }
-      nav a { margin: 0 12px 0 0; }
-      .hero { padding: 55px 6%; }
-      section { padding: 48px 6%; }
-      .hero-art { min-height: 180px; font-size: 75px; }
+
+    .brand span {
+      color: var(--ink);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--teal);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 21px;
+      background: var(--teal);
+      color: white;
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .button:hover {
+      background: var(--teal-dark);
+      transform: translateY(-1px);
+    }
+
+    .button-outline {
+      background: white;
+      color: var(--teal);
+      border: 1px solid var(--teal);
+    }
+
+    .button-outline:hover {
+      background: var(--teal-light);
+      color: var(--teal-dark);
+    }
+
+    .hero {
+      padding: 75px 0;
+      background: linear-gradient(120deg, #f2faf7, #ffffff 70%);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 12px;
+      background: #dff3ed;
+      color: var(--teal-dark);
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5vw, 61px);
+      line-height: 1.12;
+      letter-spacing: -2px;
+      margin: 20px 0;
+      color: var(--ink);
+    }
+
+    h1 span {
+      color: var(--teal);
+    }
+
+    .hero-copy {
+      max-width: 520px;
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 27px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-photo {
+      position: relative;
+      min-height: 380px;
+      border-radius: 22px;
+      background:
+        linear-gradient(145deg, rgba(7, 91, 84, 0.08), rgba(8, 127, 114, 0.18)),
+        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85")
+        center / cover no-repeat,
+        #d9eee7;
+      box-shadow: 0 22px 55px rgba(18, 69, 60, 0.13);
+    }
+
+    .photo-note {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      padding: 16px 18px;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .photo-note strong {
+      display: block;
+      color: var(--teal-dark);
+      font-size: 15px;
+    }
+
+    .photo-note span {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .trust-strip {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 19px 0;
+      background: white;
+    }
+
+    .trust-items {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px 42px;
+      color: #45615d;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .trust-items span::before {
+      content: "✓";
+      color: var(--teal);
+      margin-right: 8px;
+      font-weight: 900;
+    }
+
+    section.content-section {
+      padding: 78px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 690px;
+      margin: 0 auto 38px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(29px, 4vw, 40px);
+      line-height: 1.2;
+      margin: 13px 0;
+      letter-spacing: -1px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .service-card {
+      padding: 27px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: white;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 35px rgba(16, 70, 60, 0.09);
+    }
+
+    .service-icon {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      border-radius: 13px;
+      background: var(--teal-light);
+      font-size: 27px;
+      margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+      font-size: 19px;
+      margin-bottom: 9px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .about-section {
+      background: #f1f8f5;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-art {
+      min-height: 300px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #d9eee6, #b7ded2);
+      display: grid;
+      place-items: center;
+      font-size: 95px;
+    }
+
+    .about-copy h2 {
+      font-size: clamp(29px, 4vw, 40px);
+      line-height: 1.2;
+      margin: 15px 0;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .areas-box {
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      text-align: center;
+      background: white;
+    }
+
+    .areas-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .area-tag {
+      padding: 9px 15px;
+      border-radius: 25px;
+      background: var(--teal-light);
+      color: var(--teal-dark);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .contact-section {
+      background: var(--teal-dark);
+      color: white;
+      text-align: center;
+      padding: 68px 0;
+    }
+
+    .contact-section h2 {
+      font-size: clamp(30px, 4vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .contact-section p {
+      max-width: 620px;
+      margin: 0 auto 24px;
+      color: #d9eeea;
+    }
+
+    .contact-section .button {
+      background: #25a875;
+      color: white;
+      padding: 15px 24px;
+    }
+
+    .contact-section .button:hover {
+      background: #1d8a60;
+    }
+
+    .contact-number {
+      margin-top: 18px;
+      font-size: 14px;
+      color: #e0f2ed;
+    }
+
+    footer {
+      background: #123b39;
+      color: #dcebe7;
+      padding: 24px 0;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: white;
+    }
+
+    @media (max-width: 800px) {
+      .navbar {
+        padding: 16px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        gap: 15px;
+      }
+
+      .hero {
+        padding: 48px 0;
+      }
+
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .hero-photo {
+        min-height: 300px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      section.content-section {
+        padding: 58px 0;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .brand {
+        font-size: 24px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-photo {
+        min-height: 250px;
+      }
+
+      .hero-buttons .button {
+        width: 100%;
+      }
+
+      .trust-items {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 12px;
+      }
+
+      .about-art {
+        min-height: 220px;
+      }
     }
   </style>
 </head>
+
 <body>
   <header>
-    <div class="logo">Cleanfinitas</div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="container navbar">
+      <a class="brand" href="#home" aria-label="Cleanfinitas home">
+        Clean<span>finitas</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#areas">Areas We Serve</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <div class="hero-text">
-        <div class="eyebrow">A cleaner space. A fresher start.</div>
-        <h1>Professional Cleaning You Can Trust</h1>
-        <p>From comfortable homes to professional workplaces, Cleanfinitas helps create cleaner, fresher spaces so you can focus on what matters.</p>
-        <a class="button" href="#contact">Request a Quotation</a>
-      </div>
-      <div class="hero-art" aria-label="Sparkling clean home illustration">✨ 🏡</div>
-    </section>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Professional Cleaning Services</span>
 
-    <section id="services">
-      <h2 class="section-title">Our Cleaning Services</h2>
-      <p class="section-intro">Reliable cleaning solutions tailored to your space and needs.</p>
-      <div class="services">
-        <article class="service">
-          <div class="icon">🏠</div>
-          <h3>Residential Cleaning</h3>
-          <p>Refresh your living spaces with cleaning for homes and everyday household areas.</p>
-        </article>
-        <article class="service">
-          <div class="icon">🏢</div>
-          <h3>Office Cleaning</h3>
-          <p>Keep your workplace neat, welcoming and ready for employees and visitors.</p>
-        </article>
-        <article class="service">
-          <div class="icon">🛋️</div>
-          <h3>Couch & Mattress Cleaning</h3>
-          <p>Give upholstered furniture and mattresses the attention they need.</p>
-        </article>
-        <article class="service">
-          <div class="icon">🪟</div>
-          <h3>Windows & Curtains</h3>
-          <p>Help your rooms feel brighter with window and curtain cleaning.</p>
-        </article>
-        <article class="service">
-          <div class="icon">🧹</div>
-          <h3>Floors & Cupboards</h3>
-          <p>Careful cleaning for floors, cupboards and household surfaces.</p>
-        </article>
-        <article class="service">
-          <div class="icon">🌿</div>
-          <h3>Yard Cleaning</h3>
-          <p>Help keep outdoor areas tidy, clean and inviting.</p>
-        </article>
+          <h1>A Cleaner Space.<br><span>A Fresher Start.</span></h1>
+
+          <p class="hero-copy">
+            From comfortable homes to professional workplaces,
+            Cleanfinitas helps create cleaner, fresher spaces with
+            cleaning solutions tailored to your needs.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="button"
+               href="https://wa.me/27711945855?text=Hello%20Cleanfinitas%2C%20I%20would%20like%20to%20request%20a%20cleaning%20quotation."
+               target="_blank"
+               rel="noopener noreferrer">
+              Get a Free Quotation →
+            </a>
+
+            <a class="button button-outline" href="#services">
+              Explore Our Services
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-photo" role="img"
+             aria-label="Professional cleaning in a bright home">
+          <div class="photo-note">
+            <strong>Clean spaces, greater peace of mind.</strong>
+            <span>Residential and commercial cleaning solutions</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="about" id="about">
-      <h2 class="section-title">About Cleanfinitas</h2>
-      <p>We provide residential and commercial cleaning services with a focus on care, reliability and professional service. Our goal is to help every client enjoy a cleaner, more comfortable environment.</p>
-      <p>Contact us to discuss your cleaning needs and request a quotation tailored to your space.</p>
+    <div class="trust-strip">
+      <div class="container trust-items">
+        <span>Residential Cleaning</span>
+        <span>Commercial Cleaning</span>
+        <span>Tailored Quotations</span>
+      </div>
+    </div>
+
+    <section class="content-section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">What We Do</span>
+          <h2>Cleaning Solutions for Every Space</h2>
+          <p>
+            Tell us what needs attention. We'll discuss your requirements
+            and help you find a suitable cleaning solution.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🏠</div>
+            <h3>Residential Cleaning</h3>
+            <p>Cleaning for homes and household spaces, helping you enjoy a fresher, more comfortable environment.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🏢</div>
+            <h3>Office Cleaning</h3>
+            <p>Cleaning solutions to help keep offices and commercial spaces neat, presentable and welcoming.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🛋️</div>
+            <h3>Couch & Mattress Cleaning</h3>
+            <p>Special attention for upholstered furniture and mattresses to refresh the spaces where you relax.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🪟</div>
+            <h3>Window & Curtain Cleaning</h3>
+            <p>Care for windows and curtains to help your rooms feel brighter and more inviting.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🧹</div>
+            <h3>Floors & Cupboards</h3>
+            <p>Cleaning for floors, cupboards and household surfaces as part of your cleaning requirements.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🌿</div>
+            <h3>Yard Cleaning</h3>
+            <p>Help keep outdoor areas tidy and presentable with yard cleaning services.</p>
+          </article>
+        </div>
+
+        <div style="text-align:center; margin-top:35px;">
+          <a class="button"
+             href="https://wa.me/27711945855?text=Hello%20Cleanfinitas%2C%20please%20tell%20me%20more%20about%20your%20cleaning%20services."
+             target="_blank"
+             rel="noopener noreferrer">
+            Ask About Our Services →
+          </a>
+        </div>
+      </div>
     </section>
 
-    <section class="areas">
-      <h2 class="section-title">Where We Serve</h2>
-      <p class="section-intro">Contact us to discuss service availability in your area.</p>
-      <p class="area-list">Gauteng · North West · Mpumalanga · Limpopo</p>
+    <section class="content-section about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-art" aria-hidden="true">✨ 🏡</div>
+
+        <div class="about-copy">
+          <span class="eyebrow">About Cleanfinitas</span>
+          <h2>We Care About Your Space</h2>
+
+          <p>
+            Cleanfinitas provides residential and commercial cleaning
+            services with a focus on care, reliability and professional
+            service.
+          </p>
+
+          <p>
+            Every space has different needs. Contact us to discuss your
+            requirements and request a quotation suited to your property.
+          </p>
+
+          <a class="button"
+             href="https://wa.me/27711945855?text=Hello%20Cleanfinitas%2C%20I%20would%20like%20to%20discuss%20my%20cleaning%20requirements."
+             target="_blank"
+             rel="noopener noreferrer">
+            Let's Talk About Your Cleaning Needs
+          </a>
+        </div>
+      </div>
     </section>
 
-    <section class="contact" id="contact">
-      <h2>Ready for a Cleaner Space?</h2>
-      <p>Get in touch with Cleanfinitas to discuss your requirements and request a quotation.</p>
-     
-<a class="button"
-   href="https://wa.me/27711945855?text=Hello%20Cleanfinitas%2C%20I%20would%20like%20to%20request%20a%20cleaning%20quotation."
-   target="_blank"
-   rel="noopener noreferrer">
-  Chat with us on WhatsApp
-</a>
+    <section class="content-section" id="areas">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Our Service Areas</span>
+          <h2>Serving Clients Across Multiple Provinces</h2>
+          <p>Contact us to confirm availability for your location and cleaning requirements.</p>
+        </div>
 
-      <p>Please add your business email and WhatsApp number to make it easy for customers to reach you.</p>
+        <div class="areas-box">
+          <div class="areas-list">
+            <span class="area-tag">Gauteng</span>
+            <span class="area-tag">North West</span>
+            <span class="area-tag">Mpumalanga</span>
+            <span class="area-tag">Limpopo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <h2>Ready for a Cleaner Space?</h2>
+        <p>
+          Tell us what you need cleaned, where you're located, and
+          when you need the service. Contact Cleanfinitas to start
+          your quotation request.
+        </p>
+
+        <a class="button"
+           href="https://wa.me/27711945855?text=Hello%20Cleanfinitas%2C%20I%20would%20like%20to%20request%20a%20cleaning%20quotation.%20My%20location%20is%20"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span aria-hidden="true">◉</span> Request a Quotation on WhatsApp
+        </a>
+
+        <div class="contact-number">
+          WhatsApp: +27 71 194 5855
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    &copy; 2026 Cleanfinitas. All rights reserved.
+    <div class="container">
+      © 2026 Cleanfinitas. All rights reserved.
+      <br>
+      Professional residential and commercial cleaning services.
+    </div>
   </footer>
 </body>
 </html>
-
