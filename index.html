@@ -221,16 +221,19 @@
       gap: 12px;
       flex-wrap: wrap;
     }
- relative;
-      min-height: 380px;
-      border-radius: 22px;
-      background:
-        linear-gradient(145deg, rgba(7, 91, 84, 0.08), rgba(8, 127, 114, 0.18)),
-        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85")
-        center / cover no-repeat,
-        #d9eee7;
-      box-shadow: 0 22px 55px rgba(18, 69, 60, 0.13);
-    }
+ 
+.hero-photo {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  border-radius: 22px;
+  background-color: #d9eee7;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 22px 55px rgba(18, 69, 60, 0.13);
+  overflow: hidden;
+}
 
     .photo-note {
       position: absolute;
