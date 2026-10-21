@@ -62,14 +62,40 @@
       gap: 20px;
     }
 
+    
     .brand {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .brand-logo {
+      display: block;
+      width: 190px;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+ {
       color: var(--teal);
       font-size: 27px;
       font-weight: 800;
       letter-spacing: -1px;
     }
 
-    .brand span {
+    
+    .brand {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .brand-logo {
+      display: block;
+      width: 190px;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+ {
       color: var(--ink);
     }
 
@@ -470,7 +496,11 @@
 <body>
   <header>
     <div class="container navbar">
+      
       <a class="brand" href="#home" aria-label="Cleanfinitas home">
+        <img src="cleanfinitas-logo.png" alt="Cleanfinitas Cleaning Services" class="brand-logo">
+      </a>
+
         Clean<span>finitas</span>
       </a>
 
